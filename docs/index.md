@@ -2,13 +2,11 @@
 title: Home test
 ---
 
-# Home
+# Project: Collaborative Robot Assistant for Object Transport & Assembly
 
 ## Introduction
 
-**Bold Text**
-_Italic Text_
-**_Bold and Italic Text_**
+**Develop a multi-robot system where the TurtleBot 4 autonomously transports objects between locations, and the UR5 robot arm manipulates them for sorting, assembly, or further processing**
 
 ## Research Question
 

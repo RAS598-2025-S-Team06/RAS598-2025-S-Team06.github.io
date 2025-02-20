@@ -1,5 +1,5 @@
 ---
-title: Home test
+title: Home
 ---
 
 # Collaborative Robot Assistant for Object Transport & Assembly

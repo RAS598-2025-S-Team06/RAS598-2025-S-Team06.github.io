@@ -1,5 +1,5 @@
 ---
-title: Welcome (RAS)
+title: WelcomeRAS
 tags:
 - tag1
 - tag2

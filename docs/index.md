@@ -3,13 +3,12 @@ title: Home test
 ---
 
 # Project: Collaborative Robot Assistant for Object Transport & Assembly
-Team Members: 
-Jeremy Chen<br>
-Chieh Kao<br>
-Hsing-Cheng Wang<br>
+Team Members: Jeremy Chen, Chieh Kao, Hsing-Cheng Wang<br>
+Arizona State University, RAS598 <Spring 2025>, Professor: Daniel Aukes
+
 
 ## Introduction
-**Develop a multi-robot system where the TurtleBot 4 autonomously transports objects between locations, and the UR5 robot arm manipulates them for sorting, assembly, or further processing**
+**This project focuses on developing a Collaborative Robot Assistant that integrates a TurtleBot 4 (mobile robot) and a UR5 robotic arm (stationary manipulator) to enable seamless object transport and manipulation. The key research question this project aims to address is:**
 
 ## Research Question
 

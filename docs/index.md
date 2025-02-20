@@ -11,12 +11,12 @@ title: Home
 
 
 ### **Introduction**
-This project explores the development of a **Collaborative Robot Assistant**, integrating a **TurtleBot 4 (mobile robot)** and a **UR5 robotic arm (stationary manipulator)** for object transport and manipulation.  
+This project explores the development of a **Collaborative Robot**, which integrating a **TurtleBot 4 Lite** and a **UR5 robotic arm** for object transport and manipulation.  
 
 **Research Question:**  
-*"How can a mobile robot and a robotic arm effectively collaborate in an automated environment to transport, sort, and manipulate objects with minimal human intervention?"*  
+*"How can a mobile robot and a robotic arm effectively collaborate in an automated environment to transport and manipulate objects with minimal human intervention?"*  
 
-This work is inspired by real-world warehouse automation and industrial robotics, where mobile robots transport items, and robotic arms handle detailed tasks like sorting, picking, and assembly. The project will leverage **ROS 2 for communication, SLAM for navigation (TurtleBot), and MoveIt! for motion planning (UR5).**  
+This work is inspired by real-world warehouse automation and industrial robotics, where mobile robots transport items, and robotic arms handle detailed tasks like pick & place, sorting and assembly. The project will leverage **ROS 2 for communication, SLAM for navigation (TurtleBot).**  
 
 ---
 

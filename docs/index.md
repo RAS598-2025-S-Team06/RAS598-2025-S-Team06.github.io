@@ -6,7 +6,7 @@ title: Home
 
 ## **Team Information**
 **Team Members:** Jeremy Chen, Chieh Kao, Hsing-Cheng Wang<br>
-**University and Semester:** Arizona State University, RAS598 <Spring 2025><br>
+**University and Semester:** Arizona State University, RAS598 Spring 2025<br>
 **Professor:** Daniel Aukes
 
 

@@ -2,9 +2,12 @@
 title: Home test
 ---
 
-# Project: Collaborative Robot Assistant for Object Transport & Assembly
-Team Members: Jeremy Chen, Chieh Kao, Hsing-Cheng Wang<br>
-Arizona State University, RAS598 <Spring 2025>, Professor: Daniel Aukes
+# Collaborative Robot Assistant for Object Transport & Assembly
+
+## **Team Information**
+**Team Members:** Jeremy Chen, Chieh Kao, Hsing-Cheng Wang<br>
+Arizona State University, RAS598 <Spring 2025><br>
+**Professor:** Daniel Aukes
 
 
 ## Introduction

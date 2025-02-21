@@ -399,13 +399,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sensor-usage-in-testing-and-final-demonstration" class="md-nav__link">
-    Sensor Usage in Testing and Final Demonstration
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -415,19 +408,6 @@
   <a href="#interaction-user-interface" class="md-nav__link">
     Interaction &amp; User Interface
   </a>
-  
-    <nav class="md-nav" aria-label="Interaction & User Interface">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mockup-of-interface" class="md-nav__link">
-    Mockup of Interface
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -663,13 +643,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sensor-usage-in-testing-and-final-demonstration" class="md-nav__link">
-    Sensor Usage in Testing and Final Demonstration
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -679,19 +652,6 @@
   <a href="#interaction-user-interface" class="md-nav__link">
     Interaction &amp; User Interface
   </a>
-  
-    <nav class="md-nav" aria-label="Interaction & User Interface">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mockup-of-interface" class="md-nav__link">
-    Mockup of Interface
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -827,36 +787,26 @@
 <li>
 <p><strong>UR5 Sensors:</strong></p>
 </li>
-<li><strong>Camera (OpenCV/YOLO):</strong> Used for object recognition and positioning.</li>
 <li><strong>Force-Torque Sensor (if available):</strong> Provides haptic feedback for grasping adjustments.</li>
-</ul>
-<h4 id="sensor-usage-in-testing-and-final-demonstration"><strong>Sensor Usage in Testing and Final Demonstration</strong></h4>
-<ul>
-<li><strong>Testing Phase:</strong> Verify sensor accuracy by comparing real-world vs. perceived object positions and ensuring navigation precision.</li>
-<li><strong>Final Demonstration:</strong> Sensors will dynamically adjust robot movements based on real-time data, demonstrating robustness in varied conditions.</li>
 </ul>
 <hr />
 <h3 id="interaction-user-interface"><strong>Interaction &amp; User Interface</strong></h3>
-<p>To control and monitor the robots, we will develop:<br />
-- <strong>Web Dashboard (ROS-based UI):</strong> Displays robot status, object location, and execution progress.<br />
-- <strong>Voice Commands (Optional):</strong> Allows users to instruct the system via speech (e.g., “Deliver Object A”).<br />
+<p>To control and monitor the robots, we need:<br />
+- <strong>Web Dashboard (ROS-based UI):</strong> Displays robot status, object location, and execution progress. <br />
 - <strong>Physical Buttons (Emergency Stop &amp; Manual Override):</strong> Provides safety mechanisms.  </p>
-<h4 id="mockup-of-interface"><strong>Mockup of Interface</strong></h4>
-<p><a class="glightbox" href="path/to/ui-mockup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UI Mockup" src="path/to/ui-mockup.png" /></a><br />
-<em>A wireframe of the user interface for monitoring and control.</em></p>
 <hr />
 <h3 id="control-autonomy"><strong>Control &amp; Autonomy</strong></h3>
 <ul>
 <li><strong>TurtleBot Autonomy:</strong></li>
 <li>Uses <strong>SLAM (Nav2)</strong> for autonomous navigation.</li>
 <li>
-<p>Detects when it has reached the UR5’s workspace and sends a ROS signal.</p>
+<p>Detects when it has reached the destination then sends a ROS signal, It can be a QR code on the wall.</p>
 </li>
 <li>
 <p><strong>UR5 Autonomy:</strong></p>
 </li>
-<li>Uses <strong>MoveIt! for motion planning</strong> to pick and manipulate objects.</li>
-<li>Relies on <strong>computer vision and AI-based recognition</strong> for grasping.</li>
+<li>Received the ROS signal, then go to pick and manipulate objects.</li>
+<li>Put the objects to processing-ready zone, then pick the processed part to TurtleBot.</li>
 <li>Sends a completion signal to the TurtleBot to continue to the next task.</li>
 </ul>
 <p><strong>Feedback Mechanism:</strong><br />
@@ -869,7 +819,6 @@
 <li><strong>ROS 2 communication (Topics, Services, Actions)</strong></li>
 <li><strong>SLAM optimization for indoor navigation</strong></li>
 <li><strong>Motion planning &amp; inverse kinematics (UR5)</strong></li>
-<li><strong>Computer vision for object detection and classification</strong></li>
 </ul>
 <h4 id="class-topics-needed"><strong>Class Topics Needed</strong></h4>
 <ul>
@@ -878,12 +827,11 @@
 </ul>
 <hr />
 <h3 id="final-demonstration"><strong>Final Demonstration</strong></h3>
-<p>The system will autonomously <strong>transport an object via the TurtleBot 4</strong>, and the <strong>UR5 will manipulate it (sorting/assembly)</strong> in a real-world scenario.</p>
+<p>The system will autonomously <strong>transport an object via the TurtleBot 4</strong>, and the <strong>UR5 will manipulate it (pick &amp; place)</strong> in a real-world scenario.</p>
 <h4 id="resources-needed"><strong>Resources Needed</strong></h4>
 <ul>
 <li><strong>TurtleBot 4 with a carrying tray</strong></li>
 <li><strong>UR5 robotic arm on a sturdy table</strong></li>
-<li><strong>Camera system for object recognition</strong></li>
 </ul>
 <h4 id="classroom-setup"><strong>Classroom Setup</strong></h4>
 <ul>
@@ -892,7 +840,7 @@
 </ul>
 <h4 id="handling-variability"><strong>Handling Variability</strong></h4>
 <ul>
-<li>The system will adapt to environmental changes (e.g., obstacles, lighting variations) using <strong>SLAM and adaptive grasping algorithms</strong>.</li>
+<li>The system will adapt to environmental changes (e.g., obstacles, lighting variations) using <strong>SLAM</strong>.</li>
 </ul>
 <h4 id="testing-evaluation"><strong>Testing &amp; Evaluation</strong></h4>
 <ul>

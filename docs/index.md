@@ -27,35 +27,25 @@ This work is inspired by real-world warehouse automation and industrial robotics
   - **IMU (Inertial Measurement Unit):** Helps improve localization and detect unexpected collisions.
 
 - **UR5 Sensors:**
-  - **Camera (OpenCV/YOLO):** Used for object recognition and positioning.
   - **Force-Torque Sensor (if available):** Provides haptic feedback for grasping adjustments.
-
-#### **Sensor Usage in Testing and Final Demonstration**
-- **Testing Phase:** Verify sensor accuracy by comparing real-world vs. perceived object positions and ensuring navigation precision.
-- **Final Demonstration:** Sensors will dynamically adjust robot movements based on real-time data, demonstrating robustness in varied conditions.
 
 ---
 
 ### **Interaction & User Interface**
-To control and monitor the robots, we will develop:  
-- **Web Dashboard (ROS-based UI):** Displays robot status, object location, and execution progress.  
-- **Voice Commands (Optional):** Allows users to instruct the system via speech (e.g., “Deliver Object A”).  
+To control and monitor the robots, we need:  
+- **Web Dashboard (ROS-based UI):** Displays robot status, object location, and execution progress.   
 - **Physical Buttons (Emergency Stop & Manual Override):** Provides safety mechanisms.  
-
-#### **Mockup of Interface**
-![UI Mockup](path/to/ui-mockup.png)  
-*A wireframe of the user interface for monitoring and control.*
 
 ---
 
 ### **Control & Autonomy**
 - **TurtleBot Autonomy:**
   - Uses **SLAM (Nav2)** for autonomous navigation.
-  - Detects when it has reached the UR5’s workspace and sends a ROS signal.
+  - Detects when it has reached the destination then sends a ROS signal, It can be a QR code on the wall.
 
 - **UR5 Autonomy:**
-  - Uses **MoveIt! for motion planning** to pick and manipulate objects.
-  - Relies on **computer vision and AI-based recognition** for grasping.
+  - Received the ROS signal, then go to pick and manipulate objects.
+  - Put the objects to processing-ready zone, then pick the processed part to TurtleBot.
   - Sends a completion signal to the TurtleBot to continue to the next task.
 
 **Feedback Mechanism:**  
@@ -69,7 +59,6 @@ To control and monitor the robots, we will develop:
 - **ROS 2 communication (Topics, Services, Actions)**
 - **SLAM optimization for indoor navigation**
 - **Motion planning & inverse kinematics (UR5)**
-- **Computer vision for object detection and classification**
 
 #### **Class Topics Needed**
 - **Reinforcement learning** for dynamic path planning.
@@ -78,19 +67,19 @@ To control and monitor the robots, we will develop:
 ---
 
 ### **Final Demonstration**
-The system will autonomously **transport an object via the TurtleBot 4**, and the **UR5 will manipulate it (sorting/assembly)** in a real-world scenario.
+The system will autonomously **transport an object via the TurtleBot 4**, and the **UR5 will manipulate it (pick & place)** in a real-world scenario.
 
 #### **Resources Needed**
 - **TurtleBot 4 with a carrying tray**
 - **UR5 robotic arm on a sturdy table**
-- **Camera system for object recognition**
+
 
 #### **Classroom Setup**
 - Open floor space for TurtleBot navigation.
 - A fixed workspace for UR5 operations.
 
 #### **Handling Variability**
-- The system will adapt to environmental changes (e.g., obstacles, lighting variations) using **SLAM and adaptive grasping algorithms**.
+- The system will adapt to environmental changes (e.g., obstacles, lighting variations) using **SLAM**.
 
 #### **Testing & Evaluation**
 - **Navigation Accuracy:** Measure deviation from planned vs. actual path.

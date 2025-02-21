@@ -62,7 +62,6 @@ To control and monitor the robots, we need:
 
 #### **Class Topics Needed**
 - **Reinforcement learning** for dynamic path planning.
-- **Edge AI processing** for real-time vision-based decision-making.
 
 ---
 
@@ -70,7 +69,7 @@ To control and monitor the robots, we need:
 The system will autonomously **transport an object via the TurtleBot 4**, and the **UR5 will manipulate it (pick & place)** in a real-world scenario.
 
 #### **Resources Needed**
-- **TurtleBot 4 with a carrying tray**
+- **TurtleBot 4 with a carrying tray(maybe)**
 - **UR5 robotic arm on a sturdy table**
 
 
@@ -92,6 +91,6 @@ The system will autonomously **transport an object via the TurtleBot 4**, and th
 ### **Impact**
 This project contributes to the study of **multi-robot collaboration**, enhancing skills in **ROS 2, motion planning, SLAM, and perception**. The work has practical applications in **smart warehouses, logistics, and industrial automation**.  
 
-By developing this project, we aim to create a **reproducible framework** for future multi-robot systems and inspire further research in **collaborative robotics**.
+We aim to create a **reproducible framework** for future multi-robot systems.
 
 ---

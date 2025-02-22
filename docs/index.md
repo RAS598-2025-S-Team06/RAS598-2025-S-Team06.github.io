@@ -57,25 +57,38 @@ In order to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, 
 ---
 
 ### **Final Demonstration**
-The system will autonomously **transport an object via the TurtleBot 4**, and the **UR5 will manipulate it (pick & place)** in a real-world scenario.
+In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object, and a UR5 robotic arm performs pick-and-place operations. The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting.
 
 #### **Resources Needed**
 - **TurtleBot 4 with a carrying tray(maybe)**
 - **UR5 robotic arm on a sturdy table**
-
+- **TurtleBot 4 (possibly equipped with a carrying tray for object transport)**
+- **UR5 robotic arm mounted on a sturdy table**
+- **ROS 2-based computing setup for communication and coordination**
+- **LiDAR, depth camera, IMU, and force-torque sensors for navigation and manipulation feedback**
+- **Gazebo simulation environment for real-time digital twin verification**
+- **Modular tables to construct an elevated track for TurtleBot 4, ensuring that the robot and UR5 arm operate at the same height.**
 
 #### **Classroom Setup**
-- Open floor space for TurtleBot navigation.
-- A fixed workspace for UR5 operations.
+- Open floor space: Ensuring sufficient area for TurtleBot 4 to navigate safely.
+- Dedicated workspace for UR5: A fixed, stable table where the robotic arm will operate.
+- Elevated Track System: Depending on demonstration needs, we may arrange tables to form a track-like platform for TurtleBot 4, allowing it to operate at the same height as the UR5 robotic arm. This will ensure seamless object transfer between the mobile robot and the robotic arm.
+- Minimal environmental interference: Avoid excessive lighting changes or obstructions that may interfere with LiDAR and depth camera data.
 
 #### **Handling Variability**
-- The system will adapt to environmental changes (e.g., obstacles, lighting variations) using **SLAM**.
+- The system is designed to adapt dynamically to environmental changes, including:
+- Obstacle Avoidance: Using LiDAR and depth camera, TurtleBot 4 will identify and avoid unexpected obstacles in real time.
+- Lighting Variations: Depth sensors will compensate for changing light conditions.
+- Uncertain Object Heights: UR5’s force-torque sensor will tap the top of the stacked objects to determine the height for precise grasping.
+- Sensor-Based Feedback: If a grasp fails, the system will reattempt pick-and-place operations with adjusted parameters.
+- Height Adjustment via Modular Track: If necessary, the table track system will allow the TurtleBot to maintain the required height alignment with the UR5.
 
 #### **Testing & Evaluation**
-- **Navigation Accuracy:** Measure deviation from planned vs. actual path.
-- **Grasping Success Rate:** Percentage of successful picks by UR5.
-- **Task Completion Time:** Efficiency of transport and manipulation.
-- **Error Recovery:** System’s ability to handle failures dynamically.
+- To validate the system’s performance, we will measure the following key metrics:
+- Navigation Accuracy: We will compare TurtleBot 4’s planned path with its actual trajectory, measuring deviations and making necessary SLAM adjustments.
+- Grasping Success Rate: The percentage of successful object pickups by the UR5 robotic arm will be calculated while optimizing grip strength and positioning based on failure rates.
+- Task Completion Time: The efficiency of transport and manipulation will be determined by measuring the total time taken to complete each task.
+- Error Recovery: The system’s ability to handle failures dynamically will be analyzed through mechanisms such as obstacle avoidance, reattempted grasps, and recalculated navigation paths.
 
 ---
 

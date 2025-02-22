@@ -47,9 +47,7 @@ To control and monitor the robots, we will be building a dashboard on the ROS-ba
 ---
 
 ### **Control & Autonomy**
-- **TurtleBot Autonomy:**
-  - Uses **SLAM (Nav2)** for autonomous navigation.
-  - Detects when it has reached the destination then sends a ROS signal, It can be a QR code on the wall.
+On TurtleBot, we will ose SLAM for autonomous navigation, which will detects when it has reached the destination then sends a ROS signal, It can be a QR code on the wall for instance. On UR5,
 
 - **UR5 Autonomy:**
   - Received the ROS signal, then go to pick and manipulate objects.

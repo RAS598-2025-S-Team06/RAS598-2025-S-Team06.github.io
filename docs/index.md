@@ -52,13 +52,7 @@ On TurtleBot, we will use SLAM for autonomous navigation, which will detect when
 ---
 
 ### **Preparation Needs**
-#### **Knowledge Requirements**
-- **ROS 2 communication (Topics, Services, Actions)**
-- **SLAM optimization for indoor navigation**
-- **Motion planning & inverse kinematics (UR5)**
-
-#### **Class Topics Needed**
-- **Reinforcement learning** for dynamic path planning.
+Inorder to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, we need to understand ROS 2 communication, including Topics for real-time data exchange, Services for request-response interactions, and Actions for handling asynchronous tasks. SLAM optimization is important for the TurtleBot’s accurate navigation, ensuring robust mapping and localization. For object manipulation, the UR5 relies on motion planning and inverse kinematics to do smooth and precise movements. Additionally, we will use Gazebo simulation for testing and refining the system in a virtual environment.
 
 ---
 

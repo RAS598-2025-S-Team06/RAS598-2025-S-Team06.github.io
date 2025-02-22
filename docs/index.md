@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # Collaborative Robot Assistant for Object Transport & Assembly
 
 ## **Team Information**

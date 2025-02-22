@@ -47,16 +47,7 @@ To control and monitor the robots, we will be building a dashboard on the ROS-ba
 ---
 
 ### **Control & Autonomy**
-On TurtleBot, we will ose SLAM for autonomous navigation, which will detects when it has reached the destination then sends a ROS signal, It can be a QR code on the wall for instance. On UR5,
-
-- **UR5 Autonomy:**
-  - Received the ROS signal, then go to pick and manipulate objects.
-  - Put the objects to processing-ready zone, then pick the processed part to TurtleBot.
-  - Sends a completion signal to the TurtleBot to continue to the next task.
-
-**Feedback Mechanism:**  
-- Sensors (camera, LIDAR, force-torque) provide real-time data.
-- ROS 2 topics and services handle multi-robot communication.
+On TurtleBot, we will use SLAM for autonomous navigation, which will detect when it has reached the destination then sends a ROS signal, It can be a QR code on the wall for instance. On UR5, after receiving ROS signal from TurtleBot, robot arm will go to pick the parts from it and place it on the processing-ready zone. Then pick the processed part, place it on the TurtleBot. Finally, sends a completion signal to TurtleBot to continue the next task. 
 
 ---
 

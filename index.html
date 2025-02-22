@@ -767,33 +767,37 @@
 
 <h1 id="collaborative-robot-assistant-for-object-transport-assembly">Collaborative Robot Assistant for Object Transport &amp; Assembly</h1>
 <h2 id="team-information"><strong>Team Information</strong></h2>
-<p><strong>Team Members:</strong> Jeremy Chen, Chieh Kao, Hsing-Cheng Wang<br>
-<strong>University and Semester:</strong> Arizona State University, RAS598 Spring 2025<br>
+<p><strong>Team Number:</strong> 6
+<strong>Team Members:</strong> Jeremy Chen, Chieh Kao, Hsing-Cheng Wang
+<strong>Semester and Year:</strong> Spring 2025
+<strong>School:</strong> Arizona State University
+<strong>Class:</strong> RAS598 - Experimentation and Deployment of Robotic Systems
 <strong>Professor:</strong> Daniel Aukes</p>
 <h3 id="introduction"><strong>Introduction</strong></h3>
-<p>This project explores the development of a <strong>Collaborative Robot</strong>, which integrating a <strong>TurtleBot 4 Lite</strong> and a <strong>UR5 robotic arm</strong> for object transport and manipulation.  </p>
+<p>As a variety of robots are been increasingly used in manufacutring settings, we are inspired to create a mininal project that covers the three aspects of automated manufacturing: application, collaboration ,and simulation. In real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like pick &amp; place, sorting and assembly. In this project we will leverage <strong>ROS 2 for communication, SLAM for navigation (TurtleBot), and Gazebo for simulation.</strong>  We will be integrating a <strong>TurtleBot 4 Lite</strong> and a <strong>UR5 robotic arm</strong> for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with the real world scenario. </p>
 <p><strong>Research Question:</strong><br />
-<em>"How can a mobile robot and a robotic arm effectively collaborate in an automated environment to transport and manipulate objects with minimal human intervention?"</em>  </p>
-<p>This work is inspired by real-world warehouse automation and industrial robotics, where mobile robots transport items, and robotic arms handle detailed tasks like pick &amp; place, sorting and assembly. The project will leverage <strong>ROS 2 for communication, SLAM for navigation (TurtleBot).</strong>  </p>
+<em>"A minimal automated manufactuing setting including a object transporting robot, object manipulating robot arm, and a real-time simulation."</em>  </p>
 <hr />
 <h3 id="sensor-integration"><strong>Sensor Integration</strong></h3>
 <h4 id="how-will-sensor-data-be-used-in-the-code"><strong>How will sensor data be used in the code?</strong></h4>
 <ul>
 <li><strong>TurtleBot 4 Sensors:</strong></li>
 <li><strong>LIDAR &amp; Depth Camera:</strong> Used for SLAM-based navigation, object detection, and obstacle avoidance.</li>
+<li><strong>IMU (Inertial Measurement Unit):</strong> Helps improve localization and detect unexpected collisions.</li>
 <li>
-<p><strong>IMU (Inertial Measurement Unit):</strong> Helps improve localization and detect unexpected collisions.</p>
+<p><strong>Wheel rotation tracker:</strong> For the localization of turtlebot.</p>
 </li>
 <li>
 <p><strong>UR5 Sensors:</strong></p>
 </li>
-<li><strong>Force-Torque Sensor (if available):</strong> Provides haptic feedback for grasping adjustments.</li>
+<li><strong>Force-Torque Sensor:</strong> Provides haptic feedback for grasping adjustments.</li>
 </ul>
+<p>To utilize sensors on each robot, we are planning to feed the sensor input to our local host computer, becasue we suspect the SLAM navigation will require significant amount of computing power, which might be overwhelming for the raspberry Pi on the turtlebot. By inputing the Lidar and Depth camera sensor data to local computing power, we will return the navigation result to the turtlebot to commmand its movement. As the turtlebot approaches the pickup destination, it will trigger a signal to start the UR5 robot arm. The robot arm will perfrom pick and place from the stack of objects and place it on top of the turtlebot. To correctly track the height of the stack of items, UR5 will utilize its torque sensor to gently tap the top of the stack to acquire the height of the top most item. The UR5 will send this torque data to the local computer for height calculation as well as for simulation purposes. </p>
+<p>On the simulation end, UR5 will be sending out the angles of each actuator, which will then be used in the simulation to reflect the orientation of the robot arm. Similarly, turtlebot will be sending the data from wheel speed sensor and the IMU to host computer. The host computer will then integrate the data from the two source, with the wheel speed sensor as the main input and the IMU as a reference in case of any unexpected incidents.</p>
 <hr />
 <h3 id="interaction-user-interface"><strong>Interaction &amp; User Interface</strong></h3>
-<p>To control and monitor the robots, we need:<br />
-- <strong>Web Dashboard (ROS-based UI):</strong> Displays robot status, object location, and execution progress. <br />
-- <strong>Physical Buttons (Emergency Stop &amp; Manual Override):</strong> Provides safety mechanisms.  </p>
+<p>To control and monitor the robots, we will be building a dashboard on the ROS-based UI. The dashboard will include to separate sections as shown in the figure below. On the left side will be the simulation, and on the right side will be all the controls needed. The controls will simply be start, stop and emergency stop. Another window will be showing the path that is rendered from the data from turtlebot.   </p>
+<p><a class="glightbox" href="images/window_sample.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="images/window_sample.png" /></a></p>
 <hr />
 <h3 id="control-autonomy"><strong>Control &amp; Autonomy</strong></h3>
 <ul>

@@ -770,27 +770,41 @@
 <p>In order to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, we need to understand ROS 2 communication, including Topics for real-time data exchange, Services for request-response interactions, and Actions for handling asynchronous tasks. SLAM optimization is important for the TurtleBot’s accurate navigation, ensuring robust mapping and localization. For object manipulation, the UR5 relies on motion planning and inverse kinematics to do smooth and precise movements. Additionally, we will use Gazebo simulation for testing and refining the system in a virtual environment.</p>
 <hr />
 <h3 id="final-demonstration"><strong>Final Demonstration</strong></h3>
-<p>The system will autonomously <strong>transport an object via the TurtleBot 4</strong>, and the <strong>UR5 will manipulate it (pick &amp; place)</strong> in a real-world scenario.</p>
+<p>In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object, and a UR5 robotic arm performs pick-and-place operations. The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting.</p>
 <h4 id="resources-needed"><strong>Resources Needed</strong></h4>
 <ul>
 <li><strong>TurtleBot 4 with a carrying tray(maybe)</strong></li>
 <li><strong>UR5 robotic arm on a sturdy table</strong></li>
+<li><strong>TurtleBot 4 (possibly equipped with a carrying tray for object transport)</strong></li>
+<li><strong>UR5 robotic arm mounted on a sturdy table</strong></li>
+<li><strong>ROS 2-based computing setup for communication and coordination</strong></li>
+<li><strong>LiDAR, depth camera, IMU, and force-torque sensors for navigation and manipulation feedback</strong></li>
+<li><strong>Gazebo simulation environment for real-time digital twin verification</strong></li>
+<li><strong>Modular tables to construct an elevated track for TurtleBot 4, ensuring that the robot and UR5 arm operate at the same height.</strong></li>
 </ul>
 <h4 id="classroom-setup"><strong>Classroom Setup</strong></h4>
 <ul>
-<li>Open floor space for TurtleBot navigation.</li>
-<li>A fixed workspace for UR5 operations.</li>
+<li>Open floor space: Ensuring sufficient area for TurtleBot 4 to navigate safely.</li>
+<li>Dedicated workspace for UR5: A fixed, stable table where the robotic arm will operate.</li>
+<li>Elevated Track System: Depending on demonstration needs, we may arrange tables to form a track-like platform for TurtleBot 4, allowing it to operate at the same height as the UR5 robotic arm. This will ensure seamless object transfer between the mobile robot and the robotic arm.</li>
+<li>Minimal environmental interference: Avoid excessive lighting changes or obstructions that may interfere with LiDAR and depth camera data.</li>
 </ul>
 <h4 id="handling-variability"><strong>Handling Variability</strong></h4>
 <ul>
-<li>The system will adapt to environmental changes (e.g., obstacles, lighting variations) using <strong>SLAM</strong>.</li>
+<li>The system is designed to adapt dynamically to environmental changes, including:</li>
+<li>Obstacle Avoidance: Using LiDAR and depth camera, TurtleBot 4 will identify and avoid unexpected obstacles in real time.</li>
+<li>Lighting Variations: Depth sensors will compensate for changing light conditions.</li>
+<li>Uncertain Object Heights: UR5’s force-torque sensor will tap the top of the stacked objects to determine the height for precise grasping.</li>
+<li>Sensor-Based Feedback: If a grasp fails, the system will reattempt pick-and-place operations with adjusted parameters.</li>
+<li>Height Adjustment via Modular Track: If necessary, the table track system will allow the TurtleBot to maintain the required height alignment with the UR5.</li>
 </ul>
 <h4 id="testing-evaluation"><strong>Testing &amp; Evaluation</strong></h4>
 <ul>
-<li><strong>Navigation Accuracy:</strong> Measure deviation from planned vs. actual path.</li>
-<li><strong>Grasping Success Rate:</strong> Percentage of successful picks by UR5.</li>
-<li><strong>Task Completion Time:</strong> Efficiency of transport and manipulation.</li>
-<li><strong>Error Recovery:</strong> System’s ability to handle failures dynamically.</li>
+<li>To validate the system’s performance, we will measure the following key metrics:</li>
+<li>Navigation Accuracy: We will compare TurtleBot 4’s planned path with its actual trajectory, measuring deviations and making necessary SLAM adjustments.</li>
+<li>Grasping Success Rate: The percentage of successful object pickups by the UR5 robotic arm will be calculated while optimizing grip strength and positioning based on failure rates.</li>
+<li>Task Completion Time: The efficiency of transport and manipulation will be determined by measuring the total time taken to complete each task.</li>
+<li>Error Recovery: The system’s ability to handle failures dynamically will be analyzed through mechanisms such as obstacle avoidance, reattempted grasps, and recalculated navigation paths.</li>
 </ul>
 <hr />
 <h3 id="impact"><strong>Impact</strong></h3>

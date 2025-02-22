@@ -101,3 +101,8 @@ As ROS2 is a new topic for all of us, we can learn the valuable lesson of how to
 We aim to create a **reproducible framework** for future multi-robot systems.
 
 ---
+
+### **Advising**
+Professor: Daniel Aukes
+
+---

@@ -1,16 +1,12 @@
----
-title: Home
----
-
 # Collaborative Robot Assistant for Object Transport & Assembly
 
 ## **Team Information**
-**Team Number:** 6
-**Team Members:** Jeremy Chen, Chieh Kao, Hsing-Cheng Wang
-**Semester and Year:** Spring 2025
-**School:** Arizona State University
-**Class:** RAS598 - Experimentation and Deployment of Robotic Systems
-**Professor:** Daniel Aukes
+**Team Number:** 6 <br>
+**Team Members:** Jeremy Chen, Chieh Kao, Hsing-Cheng Wang <br>
+**Semester and Year:** Spring 2025 <br>
+**School:** Arizona State University <br>
+**Class:** RAS598 - Experimentation and Deployment of Robotic Systems <br>
+**Professor:** Daniel Aukes <br>
 
 ### **Introduction**
 As a variety of robots are been increasingly used in manufacutring settings, we are inspired to create a mininal project that covers the three aspects of automated manufacturing: application, collaboration ,and simulation. In real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like pick & place, sorting and assembly. In this project we will leverage **ROS 2 for communication, SLAM for navigation (TurtleBot), and Gazebo for simulation.**  We will be integrating a **TurtleBot 4 Lite** and a **UR5 robotic arm** for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with the real world scenario. 

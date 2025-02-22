@@ -15,9 +15,12 @@ title: Home
 ### **Introduction**
 As a variety of robots are been increasingly used in manufacutring settings, we are inspired to create a mininal project that covers the three aspects of automated manufacturing: application, collaboration ,and simulation. In real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like pick & place, sorting and assembly. In this project we will leverage **ROS 2 for communication, SLAM for navigation (TurtleBot), and Gazebo for simulation.**  We will be integrating a **TurtleBot 4 Lite** and a **UR5 robotic arm** for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with the real world scenario. 
 
-**Research Question:**  
+**Research Question**  
 *"A minimal automated manufactuing setting including a object transporting robot, object manipulating robot arm, and a real-time simulation."*  
 
+**Sample Figure**
+The following image is created by AI just for explanation purposes.
+![alttext](./images/sample.jpg)
 
 ---
 
@@ -103,6 +106,6 @@ We aim to create a **reproducible framework** for future multi-robot systems.
 ---
 
 ### **Advising**
-Professor: Daniel Aukes
+In the near future, we will need guidance from Prof. Aukes’s especially on SLAM and Gazebo for a collaborative robotic system. To fulfill multi-robot coordination, digital twin simulation, and real-world implementation, we will need Prof. Aukes’s advice on the data flow and possible barriers so we can ensure our project’s completion and all the interaction between the TurtleBot 4 Lite and UR5 robotic arm.
 
 ---

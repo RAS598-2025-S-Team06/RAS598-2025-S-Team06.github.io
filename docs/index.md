@@ -82,7 +82,7 @@ In this demonstration, we will showcase a minimal automated manufacturing setup 
 The system is designed to adapt dynamically to environmental changes, including:
 - Obstacle Avoidance: Using LiDAR and depth camera, TurtleBot 4 will identify and avoid unexpected obstacles in real time.
 - Lighting Variations: Depth sensors will compensate for changing light conditions.
-- Uncertain Object Heights: UR5’s force-torque sensor will tap the top of the stacked objects to determine the height for precise grasping.
+-  Uncertain Object Heights: UR5’s force-torque sensor will tap the top of the stacked objects to determine the height for precise grasping.
 - Sensor-Based Feedback: If a grasp fails, the system will reattempt pick-and-place operations with adjusted parameters.
 - Height Adjustment via Modular Track: If necessary, the table track system will allow the TurtleBot to maintain the required height alignment with the UR5.
 

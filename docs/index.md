@@ -24,12 +24,12 @@ As a variety of robots are been increasingly used in manufacutring settings, we 
 ### **Sensor Integration**
 #### **How will sensor data be used in the code?**
 - **TurtleBot 4 Sensors:**
-  - **LIDAR & Depth Camera:** Used for SLAM-based navigation, object detection, and obstacle avoidance.
-  - **IMU (Inertial Measurement Unit):** Helps improve localization and detect unexpected collisions.
-  - **Wheel rotation tracker:** For the localization of turtlebot.
+    - **LIDAR & Depth Camera:** Used for SLAM-based navigation, object detection, and obstacle avoidance.
+    - **IMU (Inertial Measurement Unit):** Helps improve localization and detect unexpected collisions.
+    - **Wheel rotation tracker:** For the localization of turtlebot.
 
 - **UR5 Sensors:**
-  - **Force-Torque Sensor:** Provides haptic feedback for grasping adjustments.
+    - **Force-Torque Sensor:** Provides haptic feedback for grasping adjustments.
 
 To utilize sensors on each robot, we are planning to feed the sensor input to our local host computer, becasue we suspect the SLAM navigation will require significant amount of computing power, which might be overwhelming for the raspberry Pi on the turtlebot. By inputing the Lidar and Depth camera sensor data to local computing power, we will return the navigation result to the turtlebot to commmand its movement. As the turtlebot approaches the pickup destination, it will trigger a signal to start the UR5 robot arm. The robot arm will perfrom pick and place from the stack of objects and place it on top of the turtlebot. To correctly track the height of the stack of items, UR5 will utilize its torque sensor to gently tap the top of the stack to acquire the height of the top most item. The UR5 will send this torque data to the local computer for height calculation as well as for simulation purposes. 
 
@@ -52,7 +52,7 @@ On TurtleBot, we will use SLAM for autonomous navigation, which will detect when
 ---
 
 ### **Preparation Needs**
-Inorder to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, we need to understand ROS 2 communication, including Topics for real-time data exchange, Services for request-response interactions, and Actions for handling asynchronous tasks. SLAM optimization is important for the TurtleBot’s accurate navigation, ensuring robust mapping and localization. For object manipulation, the UR5 relies on motion planning and inverse kinematics to do smooth and precise movements. Additionally, we will use Gazebo simulation for testing and refining the system in a virtual environment.
+In order to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, we need to understand ROS 2 communication, including Topics for real-time data exchange, Services for request-response interactions, and Actions for handling asynchronous tasks. SLAM optimization is important for the TurtleBot’s accurate navigation, ensuring robust mapping and localization. For object manipulation, the UR5 relies on motion planning and inverse kinematics to do smooth and precise movements. Additionally, we will use Gazebo simulation for testing and refining the system in a virtual environment.
 
 ---
 
@@ -80,7 +80,10 @@ The system will autonomously **transport an object via the TurtleBot 4**, and th
 ---
 
 ### **Impact**
-This project contributes to the study of **multi-robot collaboration**, enhancing skills in **ROS 2, motion planning, SLAM, and perception**. The work has practical applications in **smart warehouses, logistics, and industrial automation**.  
+As ROS2 is a new topic for all of us, we can learn the valuable lesson of how to intergrate different systems and also to create a simulation with Gazebo. By going through a hands-on deployment of our system, we can have a grasp on the basic topics including but not limit to:
+1. The communication among multiple robots.
+2. Creating a simulation with Gazebo.
+3. Sensor fusion.
 
 We aim to create a **reproducible framework** for future multi-robot systems.
 

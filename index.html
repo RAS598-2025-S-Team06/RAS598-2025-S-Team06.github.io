@@ -423,26 +423,6 @@
     Preparation Needs
   </a>
   
-    <nav class="md-nav" aria-label="Preparation Needs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#knowledge-requirements" class="md-nav__link">
-    Knowledge Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-topics-needed" class="md-nav__link">
-    Class Topics Needed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -667,26 +647,6 @@
     Preparation Needs
   </a>
   
-    <nav class="md-nav" aria-label="Preparation Needs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#knowledge-requirements" class="md-nav__link">
-    Knowledge Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-topics-needed" class="md-nav__link">
-    Class Topics Needed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -803,16 +763,7 @@
 <p>On TurtleBot, we will use SLAM for autonomous navigation, which will detect when it has reached the destination then sends a ROS signal, It can be a QR code on the wall for instance. On UR5, after receiving ROS signal from TurtleBot, robot arm will go to pick the parts from it and place it on the processing-ready zone. Then pick the processed part, place it on the TurtleBot. Finally, sends a completion signal to TurtleBot to continue the next task. </p>
 <hr />
 <h3 id="preparation-needs"><strong>Preparation Needs</strong></h3>
-<h4 id="knowledge-requirements"><strong>Knowledge Requirements</strong></h4>
-<ul>
-<li><strong>ROS 2 communication (Topics, Services, Actions)</strong></li>
-<li><strong>SLAM optimization for indoor navigation</strong></li>
-<li><strong>Motion planning &amp; inverse kinematics (UR5)</strong></li>
-</ul>
-<h4 id="class-topics-needed"><strong>Class Topics Needed</strong></h4>
-<ul>
-<li><strong>Reinforcement learning</strong> for dynamic path planning.</li>
-</ul>
+<p>Inorder to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, we need to understand ROS 2 communication, including Topics for real-time data exchange, Services for request-response interactions, and Actions for handling asynchronous tasks. SLAM optimization is important for the TurtleBot’s accurate navigation, ensuring robust mapping and localization. For object manipulation, the UR5 relies on motion planning and inverse kinematics to do smooth and precise movements. Additionally, we will use Gazebo simulation for testing and refining the system in a virtual environment.</p>
 <hr />
 <h3 id="final-demonstration"><strong>Final Demonstration</strong></h3>
 <p>The system will autonomously <strong>transport an object via the TurtleBot 4</strong>, and the <strong>UR5 will manipulate it (pick &amp; place)</strong> in a real-world scenario.</p>

@@ -109,3 +109,6 @@ We aim to create a **reproducible framework** for future multi-robot systems.
 In the near future, we will need guidance from Prof. Aukes’s especially on SLAM and Gazebo for a collaborative robotic system. To fulfill multi-robot coordination, digital twin simulation, and real-world implementation, we will need Prof. Aukes’s advice on the data flow and possible barriers so we can ensure our project’s completion and all the interaction between the TurtleBot 4 Lite and UR5 robotic arm.
 
 ---
+### **Gantt Chart Project Planning**
+![alttext](./images/Gantt%20chart.png)
+

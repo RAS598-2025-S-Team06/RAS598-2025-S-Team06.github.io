@@ -13,10 +13,10 @@ title: Home
 **Professor:** Daniel Aukes <br>
 
 ### **Introduction**
-As a variety of robots are been increasingly used in manufacutring settings, we are inspired to create a mininal project that covers the three aspects of automated manufacturing: application, collaboration ,and simulation. In real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like pick & place, sorting and assembly. In this project we will leverage **ROS 2 for communication, SLAM for navigation (TurtleBot), and Gazebo for simulation.**  We will be integrating a **TurtleBot 4 Lite** and a **UR5 robotic arm** for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with the real world scenario. 
+As a variety of robots are being increasingly used in manufacturing settings, we are inspired to create a minimal project that covers the three aspects of automated manufacturing: application, collaboration, and simulation. In a real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like picking & placing, sorting, and assembly. In this project we will leverage **ROS 2 for communication, SLAM for navigation (TurtleBot), and Gazebo for simulation.**  We will be integrating a **TurtleBot 4 Lite** and a **UR5 robotic arm** for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with a real-world scenario. 
 
 **Research Question**  
-*"A minimal automated manufactuing setting including a object transporting robot, object manipulating robot arm, and a real-time simulation."*  
+*"A minimal automated manufacturing setting including an object transporting robot, object manipulating robot arm, and a real-time simulation."*  
 
 **Sample Figure**
 The following image is created by AI just for explanation purposes.
@@ -34,15 +34,15 @@ The following image is created by AI just for explanation purposes.
 - **UR5 Sensors:**
     - **Force-Torque Sensor:** Provides haptic feedback for grasping adjustments.
 
-To utilize sensors on each robot, we are planning to feed the sensor input to our local host computer, becasue we suspect the SLAM navigation will require significant amount of computing power, which might be overwhelming for the raspberry Pi on the turtlebot. By inputing the Lidar and Depth camera sensor data to local computing power, we will return the navigation result to the turtlebot to commmand its movement. As the turtlebot approaches the pickup destination, it will trigger a signal to start the UR5 robot arm. The robot arm will perfrom pick and place from the stack of objects and place it on top of the turtlebot. To correctly track the height of the stack of items, UR5 will utilize its torque sensor to gently tap the top of the stack to acquire the height of the top most item. The UR5 will send this torque data to the local computer for height calculation as well as for simulation purposes. 
+To utilize sensors on each robot, we are planning to feed the sensor input to our local host computer because we suspect the SLAM navigation will require a significant amount of computing power, which might be overwhelming for the Raspberry Pi on the turtlebot. By inputting the Lidar and Depth camera sensor data to local computing power, we will return the navigation result to the turtlebot to command its movement. As the turtlebot approaches the pickup destination, it will trigger a signal to start the UR5 robot arm. The robot arm will pick and place from the stack of objects and place it on top of the turtlebot. To correctly track the height of the stack of items, UR5 will utilize its torque sensor to gently tap the top of the stack to acquire the height of the topmost item. The UR5 will send this torque data to the local computer for height calculation as well as for simulation purposes. 
 
-On the simulation end, UR5 will be sending out the angles of each actuator, which will then be used in the simulation to reflect the orientation of the robot arm. Similarly, turtlebot will be sending the data from wheel speed sensor and the IMU to host computer. The host computer will then integrate the data from the two source, with the wheel speed sensor as the main input and the IMU as a reference in case of any unexpected incidents.
+On the simulation end, UR5 will be sending out the angles of each actuator, which will then be used in the simulation to reflect the orientation of the robot arm. Similarly, the turtlebot will be sending the data from the wheel speed sensor and the IMU to host computer. The host computer will then integrate the data from the two sources, with the wheel speed sensor as the main input and the IMU as a reference in case of any unexpected incidents.
 
 
 ---
 
 ### **Interaction & User Interface**
-To control and monitor the robots, we will be building a dashboard on the ROS-based UI. The dashboard will include to separate sections as shown in the figure below. On the left side will be the simulation, and on the right side will be all the controls needed. The controls will simply be start, stop and emergency stop. Another window will be showing the path that is rendered from the data from turtlebot.   
+To control and monitor the robots, we will be building a dashboard on the ROS-based UI. The dashboard will include to separate sections as shown in the figure below. On the left side will be the simulation, and on the right side will be all the controls needed. The controls will simply be start, stop, and emergency stop. Another window will show the path that is rendered from the data from Turtlebot.   
 
 ![alt text](./images/window_sample.png)
 
@@ -79,24 +79,15 @@ In this demonstration, we will showcase a minimal automated manufacturing setup 
 - Minimal environmental interference: Avoid excessive lighting changes or obstructions that may interfere with LiDAR and depth camera data.
 
 #### **Handling Variability**
-- The system is designed to adapt dynamically to environmental changes, including:
-- Obstacle Avoidance: Using LiDAR and depth camera, TurtleBot 4 will identify and avoid unexpected obstacles in real time.
-- Lighting Variations: Depth sensors will compensate for changing light conditions.
--  Uncertain Object Heights: UR5’s force-torque sensor will tap the top of the stacked objects to determine the height for precise grasping.
-- Sensor-Based Feedback: If a grasp fails, the system will reattempt pick-and-place operations with adjusted parameters.
-- Height Adjustment via Modular Track: If necessary, the table track system will allow the TurtleBot to maintain the required height alignment with the UR5.
+The system is designed to dynamically adapt to environmental changes by incorporating various strategies. TurtleBot 4 utilizes LiDAR and a depth camera to identify and avoid unexpected obstacles in real-time, ensuring smooth navigation. Depth sensors compensate for lighting variations, allowing the system to function reliably under changing light conditions. To handle uncertainty in object heights, the UR5’s force-torque sensor taps the top of stacked objects to determine their height, enabling precise grasping. Additionally, sensor-based feedback mechanisms ensure that if a grasp fails, the system will automatically reattempt pick-and-place operations with adjusted parameters. If necessary, the table track system allows the TurtleBot to maintain the required height alignment with the UR5, ensuring seamless interaction between the two components.
 
 #### **Testing & Evaluation**
-- To validate the system’s performance, we will measure the following key metrics:
-- Navigation Accuracy: We will compare TurtleBot 4’s planned path with its actual trajectory, measuring deviations and making necessary SLAM adjustments.
-- Grasping Success Rate: The percentage of successful object pickups by the UR5 robotic arm will be calculated while optimizing grip strength and positioning based on failure rates.
-- Task Completion Time: The efficiency of transport and manipulation will be determined by measuring the total time taken to complete each task.
-- Error Recovery: The system’s ability to handle failures dynamically will be analyzed through mechanisms such as obstacle avoidance, reattempted grasps, and recalculated navigation paths.
+To validate the system’s performance, we will evaluate key metrics that reflect its accuracy, efficiency, and adaptability. Navigation accuracy will be assessed by comparing TurtleBot 4’s planned path with its actual trajectory, measuring deviations, and making necessary SLAM adjustments. The grasping success rate will be determined by calculating the percentage of successful object pickups by the UR5 robotic arm while optimizing grip strength and positioning based on failure rates. Task completion time will be measured to evaluate the overall efficiency of transport and manipulation, ensuring that each task is completed as swiftly as possible. Additionally, error recovery will be analyzed by examining the system’s ability to dynamically handle failures through mechanisms such as obstacle avoidance, reattempted grasps, and recalculated navigation paths.
 
 ---
 
 ### **Impact**
-As ROS2 is a new topic for all of us, we can learn the valuable lesson of how to intergrate different systems and also to create a simulation with Gazebo. By going through a hands-on deployment of our system, we can have a grasp on the basic topics including but not limit to:
+As ROS2 is a new topic for all of us, we can learn the valuable lesson of how to integrate different systems and also to create a simulation with Gazebo. By going through a hands-on deployment of our system, we can have a grasp on the basic topics including but not limited to:
 1. The communication among multiple robots.
 2. Creating a simulation with Gazebo.
 3. Sensor fusion.

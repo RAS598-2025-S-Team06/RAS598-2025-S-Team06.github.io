@@ -38,8 +38,8 @@ To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, includin
 ### **Interaction & User Interface**
 To control and monitor the robots, we will be building a dashboard on the ROS-based UI. The dashboard will include to separate sections as shown in the figure below. On the left side will be the simulation, and on the right side will be all the controls needed. The controls will simply be start, stop, and emergency stop. Another window will show the path that is rendered from the data from Turtlebot.   
 
-![alt text](./images/window_sample.png)
-
+![alt text](./images/GUI_0413.png)
+🟥**up to date GUI(4/13/2025)**
 
 ---
 
@@ -120,7 +120,13 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 
 ---
 ### **Gantt Chart Project Planning**
-![alttext](./images/Gantt%20chart.png)
+![alttext](./images/Gantt_0413.png)
+🟥**up to date Gantt chart(04/13/2025)**
+
+### **rqt_graph**
+![alt text](./images/rqt_graph_0413.png)
+🟥**latest rqt_graph(04/13/2025)**
+
 
 
 ### **Discussion**
@@ -145,3 +151,5 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
  Usage: Sensor fusion ensures that the TurtleBot adapts to changes in its environment, such as adjusting to traffic lights while avoiding obstacles.
  
  In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.
+
+ ### **DEMO Video (04/14/2025)**

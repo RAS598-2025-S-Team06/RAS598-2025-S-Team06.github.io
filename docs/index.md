@@ -112,11 +112,11 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 ---
 ### **Gantt Chart Project Planning**
 ![alttext](./images/Gantt_0413.png)
-**up to date Gantt chart(04/13/2025)**
+🟥**up to date Gantt chart(04/13/2025)**
 
 ### **rqt_graph**
 ![alt text](./images/rqt_graph_0413.png)
-**latest rqt_graph(04/13/2025)**
+🟥**latest rqt_graph(04/13/2025)**
 
 
 
@@ -142,3 +142,5 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
  Usage: Sensor fusion ensures that the TurtleBot adapts to changes in its environment, such as adjusting to traffic lights while avoiding obstacles.
  
  In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.
+
+ ### **DEMO Video (04/14/2025)**

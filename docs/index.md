@@ -153,7 +153,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 
 
 
-### **DEMO Video (03/11/2025)**
+### **DEMO Video**
 
   This video shows a function that can identify which color has the largest area.(03/11/2025)
  <div class="video-container">
@@ -166,6 +166,8 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
         allowfullscreen>
     </iframe>
 </div>
+
+
 <!-- Add space between the two videos -->
 This video shows a function where the car follows a red object and stops when it gets close enough.(03/11/2025)
  <div class="video-container">
@@ -180,6 +182,8 @@ This video shows a function where the car follows a red object and stops when it
         allowfullscreen>
     </iframe>
 </div>
+
+
 <!-- Add space between the two videos -->
 This video shows the TurtleBot following commands such as start, stop, and emergency stop. Simultaneously, another window displays the line chart from the TurtleBot's acceleration data. (04/14/2025)
  <div class="video-container">

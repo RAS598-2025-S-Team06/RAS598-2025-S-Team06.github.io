@@ -156,3 +156,35 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
  🟥**up to date Gantt chart(04/13/2025)**
 
  ### **DEMO Video (04/14/2025)**
+ 
+ <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/watch?v=ECX4wa9ij1w&feature=youtu.be" 
+        title="Project Demo Video" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+ </div>
+
+ <!-- If you need to style the video container, add this to your CSS file or in a style tag -->
+ <style>
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+ </style>
+

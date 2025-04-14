@@ -152,7 +152,6 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
  
  In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.
 
- 🟥**up to date Gantt chart(04/13/2025)**
 
 
 ### **DEMO Video (03/11/2025)**

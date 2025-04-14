@@ -114,3 +114,26 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 ### **Gantt Chart Project Planning**
 ![alttext](./images/Gantt%20chart.png)
 
+
+### **Discussion**
+ In this project, we use multiple sensors, including camera, IMU, and LiDAR, to enable the TurtleBot 4 to navigate autonomously and respond to traffic lights.
+ Camera (YOLO-based Traffic Light Detection): 
+ The camera captures video frames, which are processed to detect traffic lights using the YOLO object detection algorithm. The system classifies traffic lights into green, yellow, and red.
+ Preprocessing: Image adjustments, such as brightness and contrast correction, are made to ensure consistent performance under varying lighting conditions.
+ Usage: The detected traffic light color helps adjust TurtleBot's movement, e.g., stopping at red lights, slowing down for yellow, and proceeding at normal speed with green. 
+
+ IMU (Inertial Measurement Unit):
+ The IMU provides data on the robot's orientation and motion. 
+ Filtering: IMU data is filtered to reduce noise using methods like complementary or Kalman filters, improving accuracy in detecting changes in direction and speed. 
+ Usage: The filtered data ensures smooth navigation, helping the TurtleBot maintain accurate orientation even if there are minor errors or obstacles.
+ 
+ LiDAR (Light Detection and Ranging):
+ LiDAR is used for real-time mapping and obstacle detection.
+ Data Conditioning: LiDAR data is cleaned by removing outliers to ensure accurate distance measurement.
+ Usage: It helps build a local map, enabling the TurtleBot to avoid obstacles and maintain a clear path.
+ 
+ Sensor Fusion:
+ The data from the camera, IMU, and LiDAR are combined to enhance navigation and traffic light response. 
+ Usage: Sensor fusion ensures that the TurtleBot adapts to changes in its environment, such as adjusting to traffic lights while avoiding obstacles.
+ 
+ In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.

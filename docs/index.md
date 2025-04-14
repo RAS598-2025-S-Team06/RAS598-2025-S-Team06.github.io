@@ -14,6 +14,7 @@ title: Home
 
 ### **Introduction**
 As a variety of robots are being increasingly used in manufacturing settings, we are inspired to create a minimal project that covers the three aspects of automated manufacturing: application, collaboration, and simulation. In a real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like picking & placing, sorting, and assembly. In this project we will leverage ROS 2 for communication and SLAM for navigation (TurtleBot). We will be integrating a TurtleBot 4 Lite and CV2 package  for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with a real-world scenario.
+🟥**up to date Gantt chart(04/13/2025)**
 
 **Research Question**  
 *"A minimal automated manufacturing setting including an object transporting robot, object manipulating robot arm, and a real-time simulation."*  
@@ -76,7 +77,7 @@ If red, yellow, and green lights are detected simultaneously, the red light will
 This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights. The TurtleBot will continue to follow its designated path, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe and efficient navigation in a simulated traffic environment.
 
 The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting where autonomous robots interact seamlessly to perform tasks.
-
+🟥**up to date Gantt chart(04/13/2025)**
 
 
 #### **Resources Needed**
@@ -151,5 +152,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
  Usage: Sensor fusion ensures that the TurtleBot adapts to changes in its environment, such as adjusting to traffic lights while avoiding obstacles.
  
  In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.
+
+ 🟥**up to date Gantt chart(04/13/2025)**
 
  ### **DEMO Video (04/14/2025)**

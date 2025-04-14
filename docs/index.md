@@ -160,11 +160,9 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
     <iframe 
         width="315" 
         height="560" 
-        src="https://www.youtube.com/embed/ECX4wa9ij1w?si=veXThj7vVO9cr2he"  
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
+        src="https://www.youtube.com/embed/nHADi3GKK44" 
+        title="Team Assignment Step 3" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen>
     </iframe>
 </div>

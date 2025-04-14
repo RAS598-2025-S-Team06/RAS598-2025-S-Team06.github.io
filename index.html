@@ -822,13 +822,18 @@ The following image is created by AI just for explanation purposes.
 <p>In order to build a Collaborative Robot Assistant with the TurtleBot 4, we need to understand ROS 2 communication, including Topics for real-time data exchange, Services for request-response interactions, and Actions for handling asynchronous tasks. SLAM optimization is important for the TurtleBot’s accurate navigation, ensuring robust mapping and localization. Additionally, we will use Gazebo simulation for testing and refining the system in a virtual environment.</p>
 <hr />
 <h3 id="final-demonstration"><strong>Final Demonstration</strong></h3>
-<p>In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object. The TurtleBot will use CV2 package to detect traffic lights in its environment and interpret the signal color. Upon detecting a green light, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, it will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.</p>
-<p>In case of conflicting signals, the following prioritization will apply:</p>
-<p>If both green and yellow lights are detected, the yellow light will take priority.</p>
-<p>If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, causing the TurtleBot to stop.</p>
-<p>This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights.</p>
-<p>The TurtleBot will continue to follow its designated path or goal, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe navigation in a simulated traffic environment.</p>
-<p>The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting.</p>
+<p>In this demonstration, we will showcase a minimal automated manufacturing setup in which a TurtleBot 4 autonomously navigates while transporting an object.</p>
+<p>The process begins with the TurtleBot undocking and detecting its target. Upon arrival at the target location, the system will trigger a request for the item to be placed onto the TurtleBot. Once the item is successfully loaded onto the TurtleBot, it will move to the designated unloading area.</p>
+<p>After reaching the unloading area, the TurtleBot will deposit the item and return to its original position, completing the task.</p>
+<p>During this movement, the TurtleBot will utilize the CV2 package to detect traffic lights in its environment and interpret the signal color. The decision-making process based on traffic light detection is as follows:</p>
+<p>Green light: The TurtleBot will continue moving forward at its normal speed.
+Yellow light: The TurtleBot will slow down and proceed with caution.
+Red light: The TurtleBot will stop completely.</p>
+<p>In the event of conflicting signals, the following prioritization will apply:</p>
+<p>If both green and yellow lights are detected, the yellow light will take priority.
+If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, causing the TurtleBot to stop.</p>
+<p>This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights. The TurtleBot will continue to follow its designated path, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe and efficient navigation in a simulated traffic environment.</p>
+<p>The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting where autonomous robots interact seamlessly to perform tasks.</p>
 <h4 id="resources-needed"><strong>Resources Needed</strong></h4>
 <ul>
 <li>TurtleBot 4 with a carrying tray(maybe)</li>

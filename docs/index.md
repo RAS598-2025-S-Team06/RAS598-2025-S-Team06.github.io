@@ -14,7 +14,6 @@ title: Home
 
 ### **Introduction**
 As a variety of robots are being increasingly used in manufacturing settings, we are inspired to create a minimal project that covers the three aspects of automated manufacturing: application, collaboration, and simulation. In a real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like picking & placing, sorting, and assembly. In this project we will leverage ROS 2 for communication and SLAM for navigation (TurtleBot). We will be integrating a TurtleBot 4 Lite and CV2 package  for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with a real-world scenario.
-🟥**up to date Gantt chart(04/13/2025)**
 
 **Research Question**  
 *"A minimal automated manufacturing setting including an object transporting robot, object manipulating robot arm, and a real-time simulation."*  
@@ -155,8 +154,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 
  🟥**up to date Gantt chart(04/13/2025)**
 
- ### **DEMO Video (04/14/2025)**
- 
+ ### **Previous DEMO Video**
  <div class="video-container">
     <iframe 
         width="560" 
@@ -168,17 +166,32 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
         referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen>
     </iframe>
- </div>
+</div>
 
- <!-- Style for the video container -->
- <style>
+<!-- Add space between the two videos -->
+ ### **DEMO Video (04/14/2025)**
+<div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src=""  <!-- Replace this with the second video URL when decided -->
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- Style for the video containers -->
+<style>
     .video-container {
         position: relative;
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
         height: 0;
         overflow: hidden;
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Space between videos */
     }
     .video-container iframe {
         position: absolute;
@@ -187,5 +200,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
         width: 100%;
         height: 100%;
     }
- </style>
+</style>
 
+ 
+🟥**up to date Gantt chart(04/13/2025)**

@@ -33,19 +33,6 @@ The following image is created by AI just for explanation purposes.
 
 To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, including the YOLO object detection system, to our local host computer because we suspect that SLAM navigation will require significant computing power, which might overwhelm the Raspberry Pi on the TurtleBot. By inputting the LIDAR and depth camera sensor data, along with the YOLO-based traffic light detection, to the local computing power, we will return the navigation results to the TurtleBot to command its movement.
 
-The TurtleBot will use YOLO to detect traffic lights in its environment and interpret the color of the signal. When a green light is detected, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, the TurtleBot will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.
-
-In case of conflicting signals, the following prioritization will be used:
-
-If both green and yellow lights are detected, the yellow light will be given priority.
-
-If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, and the TurtleBot will stop.
-
-This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle at traffic lights.
-
-TurtleBot will continue to follow the designated path or goal and track its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the color detected, ensuring safe navigation in a simulated traffic environment.
-
-
 ---
 
 ### **Interaction & User Interface**
@@ -67,7 +54,19 @@ In order to build a Collaborative Robot Assistant with the TurtleBot 4 and UR5, 
 ---
 
 ### **Final Demonstration**
-In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object, and a UR5 robotic arm performs pick-and-place operations. The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting.
+In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object. The TurtleBot will use YOLO to detect traffic lights in its environment and interpret the signal color. Upon detecting a green light, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, it will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.
+
+In case of conflicting signals, the following prioritization will apply:
+
+If both green and yellow lights are detected, the yellow light will take priority.
+
+If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, causing the TurtleBot to stop.
+
+This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights.
+
+The TurtleBot will continue to follow its designated path or goal, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe navigation in a simulated traffic environment.
+
+The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting.
 
 #### **Resources Needed**
 - TurtleBot 4 with a carrying tray(maybe)

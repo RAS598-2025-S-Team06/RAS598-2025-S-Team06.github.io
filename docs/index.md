@@ -176,7 +176,7 @@ This video shows a function where the car follows a red object and stops when it
     <iframe 
         width="560" 
         height="315" 
-        src="https://drive.google.com/file/d/1q8c5UDY80dBIpuMrzdUr8RuHSzx2DJPz/view?usp=drive_link"  <!-- Replace this with the second video URL when decided -->
+        src="https://youtu.be/p7vHkSVYGjg"  <!-- Replace this with the second video URL when decided -->
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -198,12 +198,7 @@ This video shows the TurtleBot following commands such as start, stop, and emerg
         allowfullscreen>
     </iframe>
 </div>
-
 <!-- Add space between the two videos -->
-https://drive.google.com/file/d/1km40lN7rnkMO8wbet_AAgEu-H99l6pVQ/view?usp=drive_link
-
-
-
 
 <!-- Style for the video containers -->
 <style>

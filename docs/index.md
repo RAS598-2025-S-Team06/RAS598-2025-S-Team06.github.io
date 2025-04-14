@@ -31,12 +31,19 @@ The following image is created by AI just for explanation purposes.
     - **IMU (Inertial Measurement Unit):** Helps improve localization and detect unexpected collisions.
     - **Wheel rotation tracker:** For the localization of turtlebot.
 
-- **UR5 Sensors:**
-    - **Force-Torque Sensor:** Provides haptic feedback for grasping adjustments.
+To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, including the YOLO object detection system, to our local host computer because we suspect that SLAM navigation will require significant computing power, which might overwhelm the Raspberry Pi on the TurtleBot. By inputting the LIDAR and depth camera sensor data, along with the YOLO-based traffic light detection, to the local computing power, we will return the navigation results to the TurtleBot to command its movement.
 
-To utilize sensors on each robot, we are planning to feed the sensor input to our local host computer because we suspect the SLAM navigation will require a significant amount of computing power, which might be overwhelming for the Raspberry Pi on the turtlebot. By inputting the Lidar and Depth camera sensor data to local computing power, we will return the navigation result to the turtlebot to command its movement. As the turtlebot approaches the pickup destination, it will trigger a signal to start the UR5 robot arm. The robot arm will pick and place from the stack of objects and place it on top of the turtlebot. To correctly track the height of the stack of items, UR5 will utilize its torque sensor to gently tap the top of the stack to acquire the height of the topmost item. The UR5 will send this torque data to the local computer for height calculation as well as for simulation purposes. 
+The TurtleBot will use YOLO to detect traffic lights in its environment and interpret the color of the signal. When a green light is detected, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, the TurtleBot will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.
 
-On the simulation end, UR5 will be sending out the angles of each actuator, which will then be used in the simulation to reflect the orientation of the robot arm. Similarly, the turtlebot will be sending the data from the wheel speed sensor and the IMU to host computer. The host computer will then integrate the data from the two sources, with the wheel speed sensor as the main input and the IMU as a reference in case of any unexpected incidents.
+In case of conflicting signals, the following prioritization will be used:
+
+If both green and yellow lights are detected, the yellow light will be given priority.
+
+If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, and the TurtleBot will stop.
+
+This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle at traffic lights.
+
+TurtleBot will continue to follow the designated path or goal and track its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the color detected, ensuring safe navigation in a simulated traffic environment.
 
 
 ---

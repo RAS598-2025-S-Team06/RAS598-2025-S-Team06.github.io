@@ -158,11 +158,11 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 ### **DEMO Video (03/11/2025)**
 
   This video shows a function that can identify which color has the largest area.(03/11/2025)
-<div class="video-container">
+ <div class="video-container">
     <iframe 
         width="315" 
         height="560" 
-        src="https://youtube.com/shorts/nHADi3GKK44?si=K1yZaZxsQMFaiYb7"  
+        src="https://www.youtube.com/embed/ECX4wa9ij1w?si=veXThj7vVO9cr2he"  
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -172,11 +172,11 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 </div>
 <!-- Add space between the two videos -->
 This video shows a function where the car follows a red object and stops when it gets close enough.(03/11/2025)
-<div class="video-container">
+ <div class="video-container">
     <iframe 
         width="560" 
         height="315" 
-        src="https://youtu.be/p7vHkSVYGjg?si=UdlgD9e-kerzx4nl"  
+        src="https://www.youtube.com/embed/ECX4wa9ij1w?si=veXThj7vVO9cr2he" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

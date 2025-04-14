@@ -111,7 +111,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 
 ---
 ### **Gantt Chart Project Planning**
-![alttext](./images/Gantt%20chart.png)
+![alttext](./images/Gantt_0413.png)
 
 
 ### **Discussion**

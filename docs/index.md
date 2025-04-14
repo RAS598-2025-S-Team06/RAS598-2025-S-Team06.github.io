@@ -13,7 +13,7 @@ title: Home
 **Professor:** Daniel Aukes <br>
 
 ### **Introduction**
-As a variety of robots are being increasingly used in manufacturing settings, we are inspired to create a minimal project that covers the three aspects of automated manufacturing: application, collaboration, and simulation. In a real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like picking & placing, sorting, and assembly. In this project we will leverage ROS 2 for communication and SLAM for navigation (TurtleBot). We will be integrating a TurtleBot 4 Lite and YOLOv3  for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with a real-world scenario.
+As a variety of robots are being increasingly used in manufacturing settings, we are inspired to create a minimal project that covers the three aspects of automated manufacturing: application, collaboration, and simulation. In a real-world warehouse, mobile robots transport items, while robotic arms handle detailed tasks like picking & placing, sorting, and assembly. In this project we will leverage ROS 2 for communication and SLAM for navigation (TurtleBot). We will be integrating a TurtleBot 4 Lite and CV2 package  for object transport and manipulation. We would also like to dig into the concept of creating digital twins to simulate the behavior of each robot and further verify it with a real-world scenario.
 
 **Research Question**  
 *"A minimal automated manufacturing setting including an object transporting robot, object manipulating robot arm, and a real-time simulation."*  
@@ -31,7 +31,7 @@ The following image is created by AI just for explanation purposes.
     - **IMU (Inertial Measurement Unit):** Helps improve localization and detect unexpected collisions.
     - **Wheel rotation tracker:** For the localization of turtlebot.
 
-To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, including the YOLOv3 object detection system, to our local host computer because we suspect that SLAM navigation will require significant computing power, which might overwhelm the Raspberry Pi on the TurtleBot. By inputting the LIDAR and depth camera sensor data, along with the YOLOv3-based traffic light detection, to the local computing power, we will return the navigation results to the TurtleBot to command its movement.
+To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, including the CV2 package object detection system, to our local host computer because we suspect that SLAM navigation will require significant computing power, which might overwhelm the Raspberry Pi on the TurtleBot. By inputting the LIDAR and depth camera sensor data, along with the CV2 package-based traffic light detection, to the local computing power, we will return the navigation results to the TurtleBot to command its movement.
 
 ---
 
@@ -56,7 +56,7 @@ In order to build a Collaborative Robot Assistant with the TurtleBot 4, we need 
 ---
 
 ### **Final Demonstration**
-In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object. The TurtleBot will use YOLOv3 to detect traffic lights in its environment and interpret the signal color. Upon detecting a green light, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, it will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.
+In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object. The TurtleBot will use CV2 package to detect traffic lights in its environment and interpret the signal color. Upon detecting a green light, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, it will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.
 
 In case of conflicting signals, the following prioritization will apply:
 
@@ -75,18 +75,17 @@ The system will demonstrate real-time multi-robot collaboration, SLAM-based navi
 - TurtleBot 4 (possibly equipped with a carrying tray for object transport)
 - ROS 2-based computing setup for communication and coordination
 - LiDAR, depth camera, IMU, and force-torque sensors for navigation and manipulation feedback
-- Gazebo simulation environment for real-time digital twin verification
 
 
 #### **Classroom Setup**
 - Open floor space: Ensuring sufficient area for TurtleBot 4 to navigate safely.
 - Elevated Track System: Depending on the demonstration needs, we may arrange tables to form a track-like platform for TurtleBot 4, allowing it to operate at the same height as the traffic light system. This will ensure seamless interaction between the TurtleBot and the traffic light system, enabling it to detect and respond to traffic light signals effectively.
-- Minimal environmental interference: Avoid excessive lighting changes or obstructions that may interfere with the LiDAR, depth camera, or YOLOv3-based traffic light detection.
+- Minimal environmental interference: Avoid excessive lighting changes or obstructions that may interfere with the LiDAR, depth camera, or CV2 package-based traffic light detection.
 
 #### **Handling Variability**
 The system is designed to dynamically adapt to environmental changes by incorporating various strategies. TurtleBot 4 utilizes LiDAR and a depth camera to identify and avoid unexpected obstacles in real-time, ensuring smooth navigation. Depth sensors compensate for lighting variations, allowing the system to function reliably under changing light conditions.
 
-TurtleBot will use YOLOv3 to detect traffic lights in its environment and adjust its speed accordingly. If a green light is detected, it will continue moving at its normal speed. If a yellow light is detected, it will slow down. If a red light is detected, it will stop. This dynamic adjustment ensures that TurtleBot responds appropriately to the traffic signal in real-time.
+TurtleBot will use CV2 package to detect traffic lights in its environment and adjust its speed accordingly. If a green light is detected, it will continue moving at its normal speed. If a yellow light is detected, it will slow down. If a red light is detected, it will stop. This dynamic adjustment ensures that TurtleBot responds appropriately to the traffic signal in real-time.
 
 The table track system allows TurtleBot to maintain the required height alignment, ensuring smooth operation and effective interaction with the traffic light system.
 

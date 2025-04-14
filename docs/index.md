@@ -160,8 +160,8 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
   This video shows a function that can identify which color has the largest area.(03/11/2025)
 <div class="video-container">
     <iframe 
-        width="560" 
-        height="315" 
+        width="315" 
+        height="560" 
         src="https://drive.google.com/file/d/1km40lN7rnkMO8wbet_AAgEu-H99l6pVQ/view?usp=drive_link"  <!-- Replace this with the second video URL when decided -->
         title="YouTube video player" 
         frameborder="0" 
@@ -176,7 +176,7 @@ This video shows a function where the car follows a red object and stops when it
     <iframe 
         width="560" 
         height="315" 
-        src="https://youtu.be/p7vHkSVYGjg"  <!-- Replace this with the second video URL when decided -->
+        src="https://youtube.com/shorts/N8JQRLOtwXY?feature=share"  <!-- Replace this with the second video URL when decided -->
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

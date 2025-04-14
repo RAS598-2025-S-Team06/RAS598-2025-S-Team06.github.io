@@ -154,7 +154,38 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 
  🟥**up to date Gantt chart(04/13/2025)**
 
- ### **Previous DEMO Video**
+
+### **DEMO Video (03/11/2025)**
+
+  This video shows a function that can identify which color has the largest area.(03/11/2025)
+<div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://drive.google.com/file/d/1km40lN7rnkMO8wbet_AAgEu-H99l6pVQ/view?usp=drive_link"  <!-- Replace this with the second video URL when decided -->
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+<!-- Add space between the two videos -->
+This video shows a function where the car follows a red object and stops when it gets close enough.(03/11/2025)
+<div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://drive.google.com/file/d/1q8c5UDY80dBIpuMrzdUr8RuHSzx2DJPz/view?usp=drive_link"  <!-- Replace this with the second video URL when decided -->
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+<!-- Add space between the two videos -->
+This video shows the TurtleBot following commands such as start, stop, and emergency stop. Simultaneously, another window displays the line chart from the TurtleBot's acceleration data. (04/14/2025)
  <div class="video-container">
     <iframe 
         width="560" 
@@ -169,19 +200,10 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
 </div>
 
 <!-- Add space between the two videos -->
- ### **DEMO Video (04/14/2025)**
-<div class="video-container">
-    <iframe 
-        width="560" 
-        height="315" 
-        src=""  <!-- Replace this with the second video URL when decided -->
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-    </iframe>
-</div>
+https://drive.google.com/file/d/1km40lN7rnkMO8wbet_AAgEu-H99l6pVQ/view?usp=drive_link
+
+
+
 
 <!-- Style for the video containers -->
 <style>
@@ -201,6 +223,3 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
         height: 100%;
     }
 </style>
-
- 
-🟥**up to date Gantt chart(04/13/2025)**

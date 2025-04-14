@@ -39,7 +39,7 @@ To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, includin
 To control and monitor the robots, we will be building a dashboard on the ROS-based UI. The dashboard will include to separate sections as shown in the figure below. On the left side will be the simulation, and on the right side will be all the controls needed. The controls will simply be start, stop, and emergency stop. Another window will show the path that is rendered from the data from Turtlebot.   
 
 ![alt text](./images/GUI_0413.png)
-<span style="color:red">up to date GUI(4/13/2025)</span>
+🟥**up to date GUI(4/13/2025)**
 
 ---
 

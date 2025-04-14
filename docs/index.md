@@ -56,19 +56,28 @@ In order to build a Collaborative Robot Assistant with the TurtleBot 4, we need 
 ---
 
 ### **Final Demonstration**
-In this demonstration, we will showcase a minimal automated manufacturing setup where a TurtleBot 4 autonomously navigates while transporting an object. The TurtleBot will use CV2 package to detect traffic lights in its environment and interpret the signal color. Upon detecting a green light, the TurtleBot will continue to move forward at its normal speed. When a yellow light is detected, it will slow down and proceed with caution. If a red light is detected, the TurtleBot will stop completely.
+In this demonstration, we will showcase a minimal automated manufacturing setup in which a TurtleBot 4 autonomously navigates while transporting an object.
 
-In case of conflicting signals, the following prioritization will apply:
+The process begins with the TurtleBot undocking and detecting its target. Upon arrival at the target location, the system will trigger a request for the item to be placed onto the TurtleBot. Once the item is successfully loaded onto the TurtleBot, it will move to the designated unloading area.
+
+After reaching the unloading area, the TurtleBot will deposit the item and return to its original position, completing the task.
+
+During this movement, the TurtleBot will utilize the CV2 package to detect traffic lights in its environment and interpret the signal color. The decision-making process based on traffic light detection is as follows:
+
+Green light: The TurtleBot will continue moving forward at its normal speed.
+Yellow light: The TurtleBot will slow down and proceed with caution.
+Red light: The TurtleBot will stop completely.
+
+In the event of conflicting signals, the following prioritization will apply:
 
 If both green and yellow lights are detected, the yellow light will take priority.
-
 If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, causing the TurtleBot to stop.
 
-This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights.
+This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights. The TurtleBot will continue to follow its designated path, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe and efficient navigation in a simulated traffic environment.
 
-The TurtleBot will continue to follow its designated path or goal, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe navigation in a simulated traffic environment.
+The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting where autonomous robots interact seamlessly to perform tasks.
 
-The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting.
+
 
 #### **Resources Needed**
 - TurtleBot 4 with a carrying tray(maybe)

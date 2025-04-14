@@ -76,7 +76,6 @@ If red, yellow, and green lights are detected simultaneously, the red light will
 This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights. The TurtleBot will continue to follow its designated path, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe and efficient navigation in a simulated traffic environment.
 
 The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting where autonomous robots interact seamlessly to perform tasks.
-🟥**up to date Gantt chart(04/13/2025)**
 
 
 #### **Resources Needed**
@@ -152,7 +151,6 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
  
  In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.
 
- 🟥**up to date Gantt chart(04/13/2025)**
 
 
 ### **DEMO Video (03/11/2025)**

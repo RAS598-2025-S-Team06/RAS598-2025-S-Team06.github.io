@@ -162,7 +162,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on SLAM f
     <iframe 
         width="315" 
         height="560" 
-        src="https://youtube.com/shorts/nHADi3GKK44?si=K1yZaZxsQMFaiYb7"  <!-- Replace this with the second video URL when decided -->
+        src="https://youtube.com/shorts/nHADi3GKK44?si=K1yZaZxsQMFaiYb7"  
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -176,7 +176,7 @@ This video shows a function where the car follows a red object and stops when it
     <iframe 
         width="560" 
         height="315" 
-        src="https://youtu.be/p7vHkSVYGjg?si=UdlgD9e-kerzx4nl"  <!-- Replace this with the second video URL when decided -->
+        src="https://youtu.be/p7vHkSVYGjg?si=UdlgD9e-kerzx4nl"  
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

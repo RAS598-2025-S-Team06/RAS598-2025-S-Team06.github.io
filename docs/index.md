@@ -185,12 +185,27 @@ This video shows a function where the car follows a red object and stops when it
 
 
 <!-- Add space between the two videos -->
-This video shows the TurtleBot following commands such as start, stop, and emergency stop. Simultaneously, another window displays the line chart from the TurtleBot's acceleration data. (04/14/2025)
+This video shows the TurtleBot following commands such as start, stop, and emergency stop. Simultaneously, another window displays the line chart from the TurtleBot's acceleration data. (03/31/2025)
  <div class="video-container">
     <iframe 
         width="560" 
         height="315" 
         src="https://www.youtube.com/embed/ECX4wa9ij1w?si=veXThj7vVO9cr2he" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+<!-- Add space between the two videos -->
+
+This video shows the TurtleBot following commands such as start, stop, and emergency stop. Simultaneously, another window displays the line chart from the TurtleBot's acceleration data. (04/14/2025)
+ <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/FT7-j5SkHZQ?si=EVhtE4Q0mYWUHSoL" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

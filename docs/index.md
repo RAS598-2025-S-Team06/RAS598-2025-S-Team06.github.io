@@ -122,7 +122,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on sensor
 
 ---
 ### **Gantt Chart Project Planning**
-![alttext](./images/Gantt_0413.png)
+![alttext](./images/Gantt.png)
 **Gantt chart(05/01/2025)**
 
 ### **rqt_graph**

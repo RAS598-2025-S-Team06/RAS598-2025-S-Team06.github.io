@@ -233,3 +233,21 @@ This video shows the TurtleBot following commands such as start, stop, and emerg
         height: 100%;
     }
 </style>
+
+### **Final Demonstration**
+
+
+### **Final Demonstration Video**
+
+<div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/HbJuEM5fpXQ?si=zyF5up-YntAujgCs" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>

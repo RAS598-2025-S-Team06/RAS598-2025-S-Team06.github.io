@@ -44,7 +44,7 @@ To control and monitor the robots, we will be building a dashboard on the ROS-ba
 ---
 
 ### **Control & Autonomy**
-On the TurtleBot, we will use sensor-based autonomous navigation (e.g., LiDAR and depth camera data for obstacle avoidance and path planning). The TurtleBot will detect when it has reached its destination, and upon doing so, it will send a ROS signal—such as detecting a QR code on the wall.
+On the TurtleBot, we will use sensor-based autonomous navigation (e.g., LiDAR and depth camera data for obstacle avoidance and path planning). The TurtleBot will detect when it has reached its destination, and upon doing so, it will send a ROS signal—such as detecting a QR code on the wall, at the final result, we us color as the destination.
 
 Once the robot arm receives the ROS signal from the TurtleBot, it will move toward the object and adjust its speed according to the traffic light signal. The TurtleBot will continue navigating, and once it reaches a certain distance from the target, the robot arm will perform the necessary manipulation. Finally, the system will send a completion signal to the TurtleBot, enabling it to proceed to the next task.
 
@@ -64,16 +64,17 @@ After reaching the unloading area, the TurtleBot will deposit the item and retur
 
 During this movement, the TurtleBot will utilize the CV2 package to detect traffic lights in its environment and interpret the signal color. The decision-making process based on traffic light detection is as follows:
 
+Red light: The TurtleBot will continue moving forward until it close enough to the red object(depend by pixels).
 Green light: The TurtleBot will continue moving forward at its normal speed.
-Yellow light: The TurtleBot will slow down and proceed with caution.
-Red light: The TurtleBot will stop completely.
+Blue light: The TurtleBot will slow down and proceed with caution.
 
 In the event of conflicting signals, the following prioritization will apply:
 
-If both green and yellow lights are detected, the yellow light will take priority.
-If red, yellow, and green lights are detected simultaneously, the red light will be prioritized, causing the TurtleBot to stop.
+If both green and blue lights are detected, the blue light will take priority.
+If red, blue, and green lights are detected simultaneously, the red light will be prioritized, causing the TurtleBot go toward to it and stop.
+When the turtlebot reached the red destination, it will send a signal to UR5 robot arm, then UR5 robot will go pick the object from turtlebot then place it to the processing table.
 
-This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios, mimicking the response of a real vehicle to traffic lights. The TurtleBot will continue to follow its designated path, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe and efficient navigation in a simulated traffic environment.
+This decision-making process ensures that the TurtleBot behaves appropriately in various traffic scenarios. The TurtleBot will continue to follow its designated path, tracking its target according to the programmed instructions. If it encounters a traffic light, it will adjust its movement based on the detected signal color, ensuring safe and efficient navigation in a simulated traffic environment.
 
 Instead of SLAM, we utilize pre-defined waypoints and real-time sensor feedback for navigation to simplify processing and improve responsiveness on the TurtleBot. The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting where autonomous robots interact seamlessly to perform tasks.
 
@@ -83,12 +84,14 @@ Instead of SLAM, we utilize pre-defined waypoints and real-time sensor feedback 
 - TurtleBot 4 (possibly equipped with a carrying tray for object transport)
 - ROS 2-based computing setup for communication and coordination
 - LiDAR, depth camera, IMU, and force-torque sensors for navigation and manipulation feedback
+- UR5 robot arm
 
 
 #### **Classroom Setup**
 - Open floor space: Ensuring sufficient area for TurtleBot 4 to navigate safely.
 - Elevated Track System: Depending on the demonstration needs, we may arrange tables to form a track-like platform for TurtleBot 4, allowing it to operate at the same height as the traffic light system. This will ensure seamless interaction between the TurtleBot and the traffic light system, enabling it to detect and respond to traffic light signals effectively.
 - Minimal environmental interference: Avoid excessive lighting changes or obstructions that may interfere with the LiDAR, depth camera, or CV2 package-based traffic light detection.
+- UR5 robot arm connection needs to be stable thru the Wifi network, and the posture of the robot have to be checked whether it can reach or not.
 
 #### **Handling Variability**
 The system is designed to dynamically adapt to environmental changes by incorporating various strategies. TurtleBot 4 utilizes LiDAR and a depth camera to identify and avoid unexpected obstacles in real-time, ensuring smooth navigation. Depth sensors compensate for lighting variations, allowing the system to function reliably under changing light conditions.
@@ -98,7 +101,7 @@ TurtleBot will use CV2 package to detect traffic lights in its environment and a
 The table track system allows TurtleBot to maintain the required height alignment, ensuring smooth operation and effective interaction with the traffic light system.
 
 #### **Testing & Evaluation**
-To validate the system’s performance, we will evaluate key metrics that reflect its accuracy, efficiency, and adaptability. Navigation accuracy will be assessed by comparing TurtleBot 4’s planned path with its actual trajectory, measuring deviations and making necessary navigation parameter adjustments. The system’s responsiveness to traffic lights will be evaluated by testing TurtleBot’s ability to detect and react appropriately to traffic light signals (green, yellow, and red) in real-time. The time taken to adjust its speed and stop based on the detected signal will also be measured.
+To validate the system’s performance, we will evaluate key metrics that reflect its accuracy, efficiency, and adaptability. Navigation accuracy will be assessed by comparing TurtleBot 4’s planned path with its actual trajectory, measuring deviations and making necessary navigation parameter adjustments. The system’s responsiveness to traffic lights will be evaluated by testing TurtleBot’s ability to detect and react appropriately to traffic light signals (green, blue, and red) in real-time. The time taken to adjust its speed and stop based on the detected signal will also be measured.
 
 Task completion time will be used to evaluate the overall efficiency of the TurtleBot in navigating and responding to traffic signals. This will ensure that each task, including navigation and signal response, is completed as swiftly and effectively as possible. Additionally, error recovery will be analyzed by examining the system’s ability to handle failures dynamically, such as detecting traffic lights in challenging lighting conditions or avoiding obstacles that may disrupt the planned path.
 

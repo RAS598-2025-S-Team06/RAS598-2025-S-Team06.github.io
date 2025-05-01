@@ -143,9 +143,9 @@ In the near future, we will need guidance from Prof. Aukes, especially on sensor
     </iframe>
 </div>
 
-### **Code Breakdown**
+### **Code Repository**
 
-[Download Project Files](https://github.com/jeremychen-tw/RAS598_fullgui/tree/main)
+[Click here](https://github.com/jeremychen-tw/RAS598_fullgui/tree/main)
 
 
 ### **Discussion(05/01/2025)**

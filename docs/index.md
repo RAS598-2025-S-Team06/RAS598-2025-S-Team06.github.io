@@ -283,3 +283,9 @@ Additionally, when the virtual machine was connected to the UR while also runnin
         allowfullscreen>
     </iframe>
 </div>
+
+### **Summary**
+
+There are several potential improvements for this project. First, we could enhance the stability of the UR5’s connection to the virtual machine by installing a dual-boot system on the computer, eliminating the need for a bridge adapter and ensuring a more secure and consistent connection. Additionally, to better synchronize all ROS 2 topics, implementing a single RCLPY spinner could help maintain a manageable computational load on the virtual machine. Lastly, offloading some or all of the computing tasks—such as color recognition—to the TurtleBot itself could significantly improve its response time, resulting in smoother operation.
+
+Overall, this project provided valuable lessons in integrating and coordinating multiple devices using ROS 2. We gained hands-on experience with ROS 2 communication and developed a foundational understanding of Linux systems, including configuring networks for multi-robot setups. These skills are directly applicable to real-world factory environments and will undoubtedly support our future careers in robotics and automation.

@@ -2,7 +2,7 @@
 title: Gallery
 ---
 
-# Background
+# Gallery
 
 ## Introduction
 

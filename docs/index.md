@@ -39,7 +39,7 @@ To utilize sensors on the TurtleBot, we plan to feed the sensor inputs, includin
 To control and monitor the robots, we will be building a dashboard on the ROS-based UI. The dashboard will include to separate sections as shown in the figure below. On the left side will be the simulation, and on the right side will be all the controls needed. The controls will simply be start, stop, and emergency stop. Another window will show the path that is rendered from the data from Turtlebot.   
 
 ![alt text](./images/GUI_0413.png)
-🟥**up to date GUI(4/13/2025)**
+**GUI(05/01/2025)**
 
 ---
 
@@ -120,36 +120,51 @@ In the near future, we will need guidance from Prof. Aukes, especially on sensor
 ---
 ### **Gantt Chart Project Planning**
 ![alttext](./images/Gantt_0413.png)
-🟥**up to date Gantt chart(04/13/2025)**
+**Gantt chart(05/01/2025)**
 
 ### **rqt_graph**
 ![alt text](./images/rqt_graph_0413.png)
-🟥**latest rqt_graph(04/13/2025)**
+**rqt_graph(05/01/2025)**
 
 
 
 ### **Discussion**
- In this project, we use multiple sensors, including camera, IMU, and LiDAR, to enable the TurtleBot 4 to navigate autonomously and respond to traffic lights.
- Camera (YOLO-based Traffic Light Detection): 
- The camera captures video frames, which are processed to detect traffic lights using the YOLO object detection algorithm. The system classifies traffic lights into green, yellow, and red.
- Preprocessing: Image adjustments, such as brightness and contrast correction, are made to ensure consistent performance under varying lighting conditions.
- Usage: The detected traffic light color helps adjust TurtleBot's movement, e.g., stopping at red lights, slowing down for yellow, and proceeding at normal speed with green. 
+In this project, we integrate multiple sensors—camera, IMU, and LiDAR—along with coordinated control of the TurtleBot 4 mobile robot and the UR5 robotic arm to achieve autonomous navigation and interaction with traffic light signals.
 
- IMU (Inertial Measurement Unit):
- The IMU provides data on the robot's orientation and motion. 
- Filtering: IMU data is filtered to reduce noise using methods like complementary or Kalman filters, improving accuracy in detecting changes in direction and speed. 
- Usage: The filtered data ensures smooth navigation, helping the TurtleBot maintain accurate orientation even if there are minor errors or obstacles.
- 
- LiDAR (Light Detection and Ranging):
- LiDAR is used for real-time mapping and obstacle detection.
- Data Conditioning: LiDAR data is cleaned by removing outliers to ensure accurate distance measurement.
- Usage: It helps build a local map, enabling the TurtleBot to avoid obstacles and maintain a clear path.
- 
- Sensor Fusion:
- The data from the camera, IMU, and LiDAR are combined to enhance navigation and traffic light response. 
- Usage: Sensor fusion ensures that the TurtleBot adapts to changes in its environment, such as adjusting to traffic lights while avoiding obstacles.
- 
- In summary, the system relies on these sensors to gather real-time data, which is processed and fused to ensure precise navigation and effective interaction with the environment.
+Camera (YOLO-based Traffic Light Detection):
+The TurtleBot 4 is equipped with a camera to detect traffic lights using a YOLOv5 object detection model. The system classifies lights into three colors: red, green, and blue.
+
+Preprocessing: Brightness and contrast adjustments improve detection under varied lighting.
+
+Usage: Based on the traffic light color, the TurtleBot modifies its slowest speed at red, normal speed at green, and half speed at blue. In the demonstration, the robot accurately responds to these signals along its path.
+
+IMU (Inertial Measurement Unit):
+The IMU measures acceleration and rotational motion, allowing for accurate pose estimation.
+
+Filtering: Complementary filtering reduces noise for smooth orientation tracking.
+
+Usage: This data helps the TurtleBot maintain stability and direction, especially during turns and transitions shown in the video.
+
+LiDAR (Light Detection and Ranging):
+The LiDAR sensor continuously scans the environment to detect obstacles and generate a local map.
+
+Data Conditioning: Filtering removes spurious data points to ensure reliability.
+
+Usage: The TurtleBot uses this data for obstacle avoidance and safe route planning in a dynamic environment.
+
+Sensor Fusion:
+Sensor data from the camera, IMU, and LiDAR is combined to support adaptive navigation and interaction.
+
+Usage: The TurtleBot can recognize visual cues (traffic lights) while simultaneously avoiding obstacles and maintaining smooth motion, as seen in the integrated environment.
+
+UR5 Robotic Arm Integration:
+The UR5 robot arm is incorporated to represent the project’s end goal of multi-robot coordination.
+
+Communication: Though limited by technical constraints during testing, the system is designed for ROS2-based communication between TurtleBot 4 and UR5.
+
+Usage: In the final demonstration, the UR5 shows simulated arm movement as a placeholder for the intended object-handling or sorting task. The video illustrates how the two robots are expected to collaborate—TurtleBot for transport and detection, UR5 for manipulation.
+
+In summary, this system demonstrates an intelligent multi-robot collaboration where autonomous navigation, traffic light response, and robotic manipulation can work together, with sensor fusion ensuring robust real-time performance in semi-structured environments.
 
 
 
@@ -235,7 +250,9 @@ This video shows the TurtleBot following commands such as start, stop, and emerg
 </style>
 
 ### **Final Demonstration**
+Due to the large number of devices on the classroom network, the signal was unstable, causing frequent disconnections between the virtual machine and the UR robot arm.
 
+Additionally, when the virtual machine was connected to the UR while also running ROS2 on the TurtleBot, the system would publish an excessive number of topics, resulting in frequent communication failures. Therefore, the actions shown in the final video serve as a conceptual demonstration, representing the intended goal of our project rather than a fully synchronized real-time execution.
 
 ### **Final Simulation Video**
 

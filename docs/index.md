@@ -128,7 +128,7 @@ In the near future, we will need guidance from Prof. Aukes, especially on sensor
 
 
 
-### **Discussion**
+### **Discussion(05/01/2025)**
 In this project, we integrate multiple sensors—camera, IMU, and LiDAR—along with coordinated control of the TurtleBot 4 mobile robot and the UR5 robotic arm to achieve autonomous navigation and interaction with traffic light signals.
 
 Camera (YOLO-based Traffic Light Detection):
@@ -249,12 +249,12 @@ This video shows the TurtleBot following commands such as start, stop, and emerg
     }
 </style>
 
-### **Final Demonstration**
+### **Final Demonstration(05/01/2025)**
 Due to the large number of devices on the classroom network, the signal was unstable, causing frequent disconnections between the virtual machine and the UR robot arm.
 
 Additionally, when the virtual machine was connected to the UR while also running ROS2 on the TurtleBot, the system would publish an excessive number of topics, resulting in frequent communication failures. Therefore, the actions shown in the final video serve as a conceptual demonstration, representing the intended goal of our project rather than a fully synchronized real-time execution.
 
-### **Final Simulation Video**
+### **Final Simulation Video(05/01/2025)**
 
 <div class="video-container">
     <iframe 
@@ -269,7 +269,7 @@ Additionally, when the virtual machine was connected to the UR while also runnin
     </iframe>
 </div>
 
-### **Final Demonstration Video**
+### **Final Demonstration Video(05/01/2025)**
 
 <div class="video-container">
     <iframe 

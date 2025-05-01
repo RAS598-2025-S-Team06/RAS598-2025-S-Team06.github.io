@@ -129,6 +129,19 @@ In the near future, we will need guidance from Prof. Aukes, especially on sensor
 ![alt text](./images/rqt_graph_0413.png)
 **rqt_graph(05/01/2025)**
 
+### **Code Breakdown**
+
+  This video shows our code breakdown and all code functions explenation.(05/01/2025)
+ <div class="video-container">
+    <iframe 
+        width="315" 
+        height="560" 
+        src="https://youtube.com/embed/HUSEkDKdg_4" 
+        title="Team Assignment Step 3" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
 
 
 ### **Discussion(05/01/2025)**

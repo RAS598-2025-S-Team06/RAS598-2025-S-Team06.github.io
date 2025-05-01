@@ -78,6 +78,20 @@ This decision-making process ensures that the TurtleBot behaves appropriately in
 
 Instead of SLAM, we utilize pre-defined waypoints and real-time sensor feedback for navigation to simplify processing and improve responsiveness on the TurtleBot. The system will demonstrate real-time multi-robot collaboration, SLAM-based navigation, and adaptive object manipulation, simulating an industrial setting where autonomous robots interact seamlessly to perform tasks.
 
+### **Elevator Pitch**
+
+  Final project's elevator pitch.(05/01/2025)
+ <div class="video-container">
+    <iframe 
+        width="315" 
+        height="560" 
+        src="https://www.youtube.com/embed/1t-h4MeBaEk?si=5FxpFocPipOSpSsO" 
+        title="Team Assignment Step 3" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+
 
 #### **Resources Needed**
 - TurtleBot 4 with a carrying tray(maybe)
